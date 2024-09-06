@@ -4,7 +4,7 @@
 clear
 echo -e "\e[1;34m===================================\e[0m"
 echo -e "\e[1;34m    Backhaul Installation Script   \e[0m"
-echo -e "\e[1;34m          By Pasha Ghomi           \e[0m"
+echo -e "\e[1;34m          By ExPLoSiVe           \e[0m"
 echo -e "\e[1;34m===================================\e[0m"
 
 # Function to show loading spinner
@@ -170,6 +170,7 @@ EOF
 # Reload systemd and start service
 echo -e "\e[1;32mSetting up Backhaul service...\e[0m"
 sudo systemctl daemon-reload
+sudo systemctl stop backhaul.service
 sudo systemctl enable backhaul.service
 sudo systemctl start backhaul.service
 
