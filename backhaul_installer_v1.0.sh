@@ -170,6 +170,7 @@ EOF
 # Reload systemd and start service
 echo -e "\e[1;32mSetting up Backhaul service...\e[0m"
 sudo systemctl daemon-reload
+sudo systemctl stop backhaul.service
 sudo systemctl enable backhaul.service
 sudo systemctl start backhaul.service
 
